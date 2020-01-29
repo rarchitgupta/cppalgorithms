@@ -11,7 +11,6 @@ public:
 
     Graph(int V)    //V = Number of vertices
     {
-    
         this->V = V; 
         adj = new list<int>[V]; //new adjacency list of V vertices 
     }
@@ -22,6 +21,7 @@ public:
     }
     
 
+    
     void BFS(int s) 
     { 
         //Mark all the vertices as not visited initially 
@@ -62,6 +62,7 @@ public:
     }
 
 
+    
     void DFSUtil(int v, bool visited[]) 
     { 
         // Mark the current node as visited and 
@@ -76,7 +77,6 @@ public:
             if (!visited[*i]) 
                 DFSUtil(*i, visited); 
     } 
-  
     // DFS traversal of the vertices reachable from v. 
     // It uses recursive DFSUtil() 
     void DFS(int v) 
