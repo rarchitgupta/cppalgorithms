@@ -6,7 +6,7 @@ class Graph
     int V;    
     list<int> *adj;
   
-    // A recursive function to print DFS starting from v 
+    
     void DFSUtil(int v, vector<bool> &visited)
     { 
         visited[v] = true; 
@@ -45,18 +45,6 @@ public:
             } 
         } 
   
-        /* 
-        If there exist mother vertex (or vertices) in given 
-        graph, then v must be one (or one of them) 
-  
-        Now check if v is actually a mother vertex (or graph 
-        has a mother vertex).  We basically check if every vertex 
-        is reachable from v or not. 
-  
-        Reset all values in visited[] as false and do  
-        DFS beginning from v to check if all vertices are 
-        reachable from it or not. 
-        */
         fill(visited.begin(), visited.end(), false); 
         DFSUtil(v, visited);  
         for (int i=0; i<V; i++) 
